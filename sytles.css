@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, #232526, #414345);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .calculator {
+    width: 320px;
+    background: #1b1b1b;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    border: 3px solid #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #display {
+    width: 100%;
+    height: 80px;
+    font-size: 2.5em;
+    text-align: right;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #0d0d0d;
+    color: #19f4ff;
+    box-shadow: inset 0 5px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .btn {
+    height: 70px;
+    font-size: 1.6em;
+    background: #252525;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .btn:hover {
+    background: #3c3c3c;
+    transform: translateY(-3px);
+  }
+  
+  .btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .btn[data-value="="] {
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: #222;
+  }
+  
+  .btn[data-value="="]:hover {
+    background: linear-gradient(135deg, #e6b800, #e68a00);
+  }
+  
+  .btn[data-value="C"] {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+  }
+  
+  .btn[data-value="C"]:hover {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+  }
+  
+  .btn[data-value="+"] {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+  }
+  
+  .btn[data-value="-"] {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+  }
+  
+  .btn[data-value="*"] {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+  }
+  
+  .btn[data-value="/"] {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+  }
+  
+  .btn[data-value="+"]:hover,
+  .btn[data-value="-"]:hover,
+  .btn[data-value="*"]:hover,
+  .btn[data-value="/"]:hover {
+    filter: brightness(1.2);
+  }
